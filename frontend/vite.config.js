@@ -7,11 +7,11 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:5000',
+        target: 'https://earnest-communication-production-e683.up.railway.app',
         changeOrigin: true
       },
       '/uploads': {
-        target: 'http://127.0.0.1:5000',
+        target: 'https://earnest-communication-production-e683.up.railway.app',
         changeOrigin: true
       }
 
