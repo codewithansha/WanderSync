@@ -1,0 +1,1 @@
+mongodb+srv://anoushazameer_db_user:project123@cluster0.bptw7w2.mongodb.net/

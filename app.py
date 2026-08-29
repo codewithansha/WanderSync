@@ -1,7 +1,4 @@
-"""
-WanderSync — Flask Application Entry Point
-Registers all route blueprints and serves the React SPA.
-"""
+
 import os
 import logging
 from flask import Flask, jsonify, send_from_directory
@@ -24,9 +21,10 @@ app.config["SESSION_COOKIE_SECURE"] = False  # False for local HTTP development
 # Allow React dev server (Vite port 3000) and production with credentials (cookies)
 CORS(
     app,
-    resources={r"/api/*": {"origins": ["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173"]}},
+    resources={r"/api/*": {"origins": "*"}},
     supports_credentials=True,
 )
+
 
 # ── Register Blueprints ────────────────────────────────────────────────────────
 from routes.journey import journey_bp
